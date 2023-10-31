@@ -30,16 +30,16 @@
 - 해결법
     - Working Set
         - 지역성을 이용해 결정된 페이지 집합을 만들어 미리 메모리에 로드
-        - 일정 시간을 ∆라고 할 때 w(t, ∆) => [t-∆, t] 동안 참조된 page의 집합
-            - ∆ : window size / system parameter
-            - ∆는 고정 / allocation은 가변
+        - 일정 시간을 ∆라고 할 때 $w(t, ∆)$ => $[t-∆, t]$ 동안 참조된 page의 집합
+            - $∆$ : window size / system parameter
+            - $∆$는 고정 / allocation은 가변
         - 스와핑 감소, 탐색 비용 감소
         - 적재되는 page가 없어도 메모리 반납이 가능하며 적재되는 page가 있어도 교체가 없을 수 있음
     - PFF (Page Fault Frequency)
         - 상한선 도달 시 프레임 증가 / 하한선 도달 시 프레임 삭제
         - IFT ( Inter Fault Time ) 을 따져서 기준에 따라 메모리 관리
             - Page Fault 발생 시 IFT 계산 ( Page Fault 일어난 시간의 차 )
-            - 기준치 < IFT => (t<sub>c - 1</sub>, t<sub>c</sub>] 동안 참조된 page만 유지, 나머지는 내림
+            - 기준치 < IFT => ($t_{c-1}$, $t_{c}$] 동안 참조된 page만 유지, 나머지는 내림
             - 기준치 ≥ IFT => 현재 page 유지, 참조된 page 추가 적재 
 
 ## 메모리 할당
